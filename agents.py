@@ -4,20 +4,15 @@ from dotenv import load_dotenv
 from scanner import Finding
 from adk import Agent
 
-# --- 1. Setup ---
+# --- 1. Initial API Setup ---
 load_dotenv()
 api_key = os.getenv("GOOGLE_API_KEY")
 if not api_key:
-    # Fallback to GEMINI_API_KEY if GOOGLE_API_KEY is missing
-    api_key = os.getenv("GEMINI_API_KEY") 
-
-if not api_key:
-    raise ValueError("❌ No API Key found in .env file! Add GOOGLE_API_KEY.")
+    raise ValueError("❌ No API Key found in .env file! Please add GOOGLE_API_KEY.")
 
 genai.configure(api_key=api_key)
 
-# --- 2. Define Tools---
-
+# --- 2. Defining Tools---
 # Global vars to capture the agent's output for our main loop
 latest_verdict = {}
 latest_draft = {}
@@ -50,10 +45,8 @@ def send_notification(recipient_user: str, message_body: str):
     }
     return "Draft recorded."
 
-# --- 3. Initialize Agents ---
-
+# --- 3. Initializing Agents ---
 MODEL_NAME = "gemini-2.0-flash"
-
 print(f"🤖 Initializing Agents with model: {MODEL_NAME}")
 
 sentinel_agent = Agent(
@@ -80,8 +73,7 @@ coach_agent = Agent(
     tools=[send_notification]
 )
 
-# --- 4. Helper Functions to Run Agents ---
-
+# --- 4. Defining Helper Functions to Run Agents ---
 def verify_finding(finding: Finding):
     """Runs the Sentinel Agent"""
     global latest_verdict
