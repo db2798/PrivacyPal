@@ -18,8 +18,7 @@ This "human element" is responsible for 74% of data breaches, including the 2022
 ![Architecture Diagram](./assets/architecture.png)
 
 ## 🛠️ Tech Stack & Tools Used
-**I built this project to demonstrate **Agentic Tool Use** and **Sequential Logic**.
-
+**I built this project to demonstrate **Agentic Tool Use** and **Sequential Logic**
 * **Core AI:** Google Gemini 2.0 Flash (via `google-generativeai`)
 * **Agent Framework:** Google Agent Development Kit (ADK) for Python.
 * **Tooling:** Custom Python tools (`submit_verdict`, `send_notification`) bound to the LLM.
