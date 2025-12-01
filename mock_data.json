@@ -1,0 +1,30 @@
+[
+    {
+      "id": "msg_001",
+      "user": "alice_dev",
+      "text": "Hey team, did anyone see the new deployment docs?",
+      "channel": "#general",
+      "timestamp": "2025-11-22T09:00:00Z"
+    },
+    {
+      "id": "msg_003",
+      "user": "charlie_lead",
+      "text": "Bob, that looks like the example key from the docs. Make sure you use the test key: sk_test_4eC39HqLyXXXXXarjtT1zdp7dc",
+      "channel": "#engineering-help",
+      "timestamp": "2025-11-22T09:06:00Z"
+    },
+    {
+      "id": "msg_005",
+      "user": "eve_manager",
+      "text": "My new library card number is 4532-0000-1111-2222 if anyone needs to pick up the books.",
+      "channel": "#general",
+      "timestamp": "2025-11-22T09:20:00Z"
+    },
+    {
+      "id": "msg_008",
+      "user": "harry_backend",
+      "text": "Why is the API failing? I am calling https://api.myserver.com/v1/user?api_key=AKIAHZ23456789012345&user=123",
+      "channel": "#engineering",
+      "timestamp": "2025-11-22T09:35:00Z"
+    }
+]
