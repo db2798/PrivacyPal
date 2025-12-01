@@ -32,15 +32,23 @@ Follow these steps to get the agent running locally.
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/PrivacyPal.git
+git clone https://github.com/db2798/PrivacyPal.git
 cd PrivacyPal
 ```
 
 ### 2. Set Up Virtual Environment
 It is recommended to use a virtual environment to manage dependencies.
+
+**Mac/Linux:**
 ```bash
 python3.11 -m venv venv
 source venv/bin/activate
+```
+
+**Windows:**
+```bash
+python -m venv venv
+.\venv\Scripts\activate
 ```
 
 ### 3. Install Dependencies
