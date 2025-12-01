@@ -7,14 +7,14 @@ PrivacyPal is an intelligent, privacy-first AI agent designed to fix data leaks 
 
 ## 🚨 The Problem
 Companies face a massive risk from "Shadow IT" and accidental copy-pasting. While platforms like Slack and Jira secure the infrastructure, they operate on a Shared Responsibility Model—they cannot control the content users generate.
-**The Risk:** A developer pastes a live AWS key into a public channel, or a support rep shares a Google Doc full of credit card numbers.
-**The Failure:** Traditional DLP (Data Loss Prevention) tools use rigid pattern matching (Regex). They flag every 16-digit number as a credit card (even library cards) and every key pattern as a risk (even dummy keys), creating massive "Alert Fatigue" and a hostile "snitch" culture.
+* **The Risk:** A developer pastes a live AWS key into a public channel, or a support rep shares a Google Doc full of credit card numbers.
+* **The Failure:** Traditional DLP (Data Loss Prevention) tools use rigid pattern matching (Regex). They flag every 16-digit number as a credit card (even library cards) and every key pattern as a risk (even dummy keys), creating massive "Alert Fatigue" and a hostile "snitch" culture.
 This "human element" is responsible for 74% of data breaches, including the 2022 Uber hack.
 
 ## 💡 The Solution: "Filter, Verify, Act" - A Hybrid Agentic Architecture
-**The Trap (Deterministic):** A high-speed Regex scanner flags potential patterns (Cost: $0, Speed: Instant).
-**The Brain (Probabilistic):** A Gemini 2.0 Flash agent analyzes the context of the flagged message. It determines if the data is "Live/Real" or just "Test/Documentation."
-**The Coach (Action):** If verified, the agent sends a private, ephemeral message to the user, explaining the risk and asking for remediation.
+* **The Trap (Deterministic):** A high-speed Regex scanner flags potential patterns (Cost: $0, Speed: Instant).
+* **The Brain (Probabilistic):** A Gemini 2.0 Flash agent analyzes the context of the flagged message. It determines if the data is "Live/Real" or just "Test/Documentation."
+* **The Coach (Action):** If verified, the agent sends a private, ephemeral message to the user, explaining the risk and asking for remediation.
 ![Architecture Diagram](./assets/MermaidChart.png)
 
 ## 🛠️ Tech Stack & Tools Used
@@ -67,6 +67,6 @@ python main.py
 ```
 
 What you will see: The terminal will display the live decision log.
-✅ Green: False Positives (Safe data found and ignored).
-🔴 Red: Real Risks (Sensitive data found and verified).
-🟣 Purple: The "Coach" agent drafting and sending a private alert.
+* ✅ Green: False Positives (Safe data found and ignored).
+* 🔴 Red: Real Risks (Sensitive data found and verified).
+* 🟣 Purple: The "Coach" agent drafting and sending a private alert.
