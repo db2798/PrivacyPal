@@ -2,7 +2,7 @@ import re
 from pydantic import BaseModel
 from typing import Optional, List
 
-# --- 1. Define Data Models ---
+#Define Data Models
 class Finding(BaseModel):
     """Represents a potential security violation found by Regex."""
     pattern_type: str       # e.g., "AWS_KEY", "CREDIT_CARD"
@@ -10,7 +10,7 @@ class Finding(BaseModel):
     full_text: str          # The complete message context
     message_id: str         # ID to track back to the source
 
-# --- 2. Define The Patterns ---
+#Define The Patterns
 # We use standard Regex for common leaks
 PATTERNS = {
     "AWS_ACCESS_KEY": r"(?<![A-Z0-9])[A-Z0-9]{20}(?![A-Z0-9])",  # Broad AWS Key pattern (20 chars caps)
@@ -19,7 +19,7 @@ PATTERNS = {
     "STRIPE_TEST_KEY": r"sk_test_[0-9a-zA-Z]{24}" # Specific Stripe Test key
 }
 
-# --- 3. The Scanning Logic ---
+#Implementing the Scanning Logic
 def scan_message(message_obj: dict) -> List[Finding]:
     """
     Scans a single message dictionary for all defined patterns.

@@ -36,7 +36,7 @@ def run_privacy_pal():
         text = msg.get("text")
         print(f"{Fore.WHITE}📥 Reading message from {Style.BRIGHT}{user}{Style.NORMAL}...")
         
-        # --- PHASE 1: THE TRAP (Regex) ---
+        #PHASE 1: THE TRAP (Regex)
         findings = scan_message(msg)
         
         if not findings:
@@ -48,7 +48,7 @@ def run_privacy_pal():
                 print(f"{Fore.YELLOW}   ⚠️  TRAP TRIGGERED! Pattern: {finding.pattern_type}")
                 print(f"{Fore.YELLOW}      Match: {finding.matched_string}")
                 
-                # --- PHASE 2: THE SENTINEL (Verification Agent) ---
+                #PHASE 2: THE SENTINEL (Verification Agent)
                 print(f"{Fore.MAGENTA}      🕵️  Sentinel Agent analyzing context...")
                 verdict = verify_finding(finding)
                 
@@ -62,7 +62,7 @@ def run_privacy_pal():
                     print(f"{Fore.RED}{Style.BRIGHT}      🚨 REAL RISK CONFIRMED! Severity: {verdict.get('risk_level')}")
                     print(f"{Fore.RED}         Reason: {reasoning}")
                     
-                    # --- PHASE 3: THE COACH (Remediation Agent) ---
+                    #PHASE 3: THE COACH (Remediation Agent)
                     print(f"{Fore.MAGENTA}      ✍️  Coach Agent drafting alert...")
                     draft = draft_coaching(user, verdict)
                     
