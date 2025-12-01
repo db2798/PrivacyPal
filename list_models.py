@@ -1,3 +1,7 @@
+"""This script authenticates with the Google Gemini API using your environment key 
+and prints a list of all available models that support text generation, helping you 
+identify valid model names for your project."""
+
 import google.generativeai as genai
 import os
 from dotenv import load_dotenv

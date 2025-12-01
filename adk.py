@@ -1,3 +1,7 @@
+"""This code defines a wrapper class that initializes a Google Gemini model with specific 
+tools and system instructions, and manages a chat session that automatically executes 
+function calls when triggered by the AI."""
+
 import google.generativeai as genai
 from google.generativeai.types import FunctionDeclaration, Tool
 
