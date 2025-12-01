@@ -7,12 +7,11 @@ from colorama import Fore, Style, init
 from scanner import scan_message
 from agents import verify_finding, draft_coaching
 
-# Initialize colorama for pretty terminal output
 init(autoreset=True)
 
 # Configuration
 MOCK_DATA_PATH = "mock_data.json"
-SLEEP_DELAY = 12  # Seconds between messages (to simulate real-time reading)
+SLEEP_DELAY = 12  # Seconds between messages
 
 def load_feed():
     """Reads the JSON file acting as our 'Slack Feed'."""
